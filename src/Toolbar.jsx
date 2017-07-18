@@ -33,9 +33,9 @@ const Toolbar = () => {
 
             <select className="form-control label-select">
               <option>Remove label</option>
-              <option valueName="dev">dev</option>
-              <option valueName="personal">personal</option>
-              <option valueName="gschool">gschool</option>
+              <option value="dev">dev</option>
+              <option value="personal">personal</option>
+              <option value="gschool">gschool</option>
             </select>
 
             <button className="btn btn-default">

@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-// import Toolbar from './Toolbar';
-// import MessageList from './MessageList';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'font-awesome/css/font-awesome.css';
 import './index.css';
-
-
-// import Message from './Message';
 
 const messages = [
   {
@@ -73,5 +68,5 @@ const messages = [
   }
 ];
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App messages = {messages} />, document.getElementById('root'));
 registerServiceWorker();
