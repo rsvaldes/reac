@@ -12,7 +12,7 @@ const messages = [
     "id": 1,
     "subject": "You can't input the protocol without calculating the mobile RSS protocol!",
     "read": false,
-    "starred": false,
+    "starred": true,
     "selected": false,
     "labels": ["dev", "personal"]
   },
@@ -21,7 +21,7 @@ const messages = [
     "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
     "read": false,
     "starred": false,
-    "selected": false,
+    "selected": true,
     "labels": []
   },
   {
@@ -29,7 +29,7 @@ const messages = [
     "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
     "read": false,
     "starred": false,
-    "selected": false,
+    "selected": true,
     "labels": ["dev"]
   },
   {

@@ -5,7 +5,7 @@ class Message extends React.Component {
 
   render() {
     return (
-      <div className = {"row message" + (this.props.message.selected === true ? "row message selected" : " ")} >
+      <div className = {"row message" + (this.props.message.selected === true ? "row message selected" : " ") + (this.props.message.read === true ? "read" : " unread")} >
         <div className="col-xs-1">
         <div className="row">
           <div className="col-xs-2">
