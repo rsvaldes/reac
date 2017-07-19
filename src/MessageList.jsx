@@ -11,7 +11,8 @@ class MessageList extends React.Component {
       <div>
         {this.props.messages.map((e, i) => {
           return (
-            <Message key={i} message={e} selectMessage={this.props.selectMessage} />);
+            <Message key={i} message={e} selectMessage={this.props.selectMessage} starMessage={this.props.starMessage}
+            />);
           })
         }
       </div>
