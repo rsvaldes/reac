@@ -14,7 +14,7 @@ class Message extends React.Component {
             <input id="selectBox" type="checkbox" onChange={()=> this.props.selectMessage(this.props.message)}/>
           </div>
           <div className="col-xs-2">
-            <i className="star fa fa-star-o" onClick={()=> this.props.starMessage(this.props.message)}></i>
+            <i className={"star fa fa-star-o" + (this.props.message.starred === true ? "star fa fa-star" : " ")} onClick={()=> this.props.starMessage(this.props.message)}></i>
           </div>
         </div>
       </div>
