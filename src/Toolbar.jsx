@@ -11,13 +11,8 @@ const Toolbar = ({messages}) => {
             <span className="badge badge">2</span>
             unread messages
           </p>
-
-          <a className="btn btn-danger">
-            <i className="fa fa-plus"></i>
-          </a>
-
           <button className="btn btn-default">
-            <i className="fa fa-square-o"></i>
+            <i className="fa fa-square-o" ></i>
           </button>
 
           <button className="btn btn-default">

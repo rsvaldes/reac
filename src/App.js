@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Toolbar from './Toolbar';
 import MessageList from './MessageList';
-import Message from './Message';
 import './App.css';
 
 
@@ -26,14 +25,13 @@ class App extends Component {
         (starredMessage.starred === false) ? starredMessage.starred = true : starredMessage.starred = false;
         this.setState({messages:messagesArr});
       }
-
     };
   }
 
   render() {
     return (
       <div>
-      <Toolbar />
+      <Toolbar messages = {this.state.messages}/>
       <MessageList messages={this.state.messages} selectMessage={this.state.selectMessage} starMessage={this.state.starMessage} />
       </div>
     )}

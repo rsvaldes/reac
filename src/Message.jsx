@@ -2,9 +2,7 @@ import React from 'react';
 
 
 class Message extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   render() {
     return (
       <div className = {"row message" + (this.props.message.selected === true ? "row message selected" : " ")} >
@@ -18,8 +16,10 @@ class Message extends React.Component {
           </div>
         </div>
       </div>
-      <div className="col-xs-11">
-        <a href='#'>
+      <div className="col-xs-11">{this.props.message.labels.map((label,i) =>{return (
+        <span className="label label-warning" key={i}>{label}</span>
+      )})}
+        <a href=''>
           {this.props.message.subject}
         </a>
       </div>
