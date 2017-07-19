@@ -1,30 +1,32 @@
-// import React from 'react';
-//
-// const Message = ({messages}) => {
-//     return(
-//       <div class="row message read">
-//   <div class="col-xs-1">
-//     <div class="row">
-//       <div class="col-xs-2">
-//         <input type="checkbox" />
-//       </div>
-//       <div class="col-xs-2">
-//         <i class="star fa fa-star-o"></i>
-//       </div>
-//     </div>
-//   </div>
-//   <div class="col-xs-11">
-//     <div>
-//     <a>
-//     {messages.map(e =>
-//       e.subject)}</a>
-//       </div>
-//   </div>
-// </div>)
-    //   <div>{messages.map(e =>
-    //     e.subject)}</div>
-    // )
-  }
-//
+import React from 'react';
 
-// export default Message;
+
+class Message extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <div className = {"row message" + (this.props.message.selected === true ? "row message selected" : " ")} >
+        <div className="col-xs-1">
+        <div className="row">
+          <div className="col-xs-2">
+            <input id="selectBox" type="checkbox" onChange={()=> this.props.selectMessage(this.props.message)}/>
+          </div>
+          <div className="col-xs-2">
+            <i className="star fa fa-star-o"></i>
+          </div>
+        </div>
+      </div>
+      <div className="col-xs-11">
+        <a href='#'>
+          {this.props.message.subject}
+        </a>
+      </div>
+      </div>
+    )
+  }
+}
+
+
+export default Message

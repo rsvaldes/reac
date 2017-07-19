@@ -1,27 +1,23 @@
 import React from 'react';
+import Message from './Message';
 
-const MessageList = ({messages}) => {
-  return(
-    <div>{messages.map(e =>
-      <div className="row message read">
-      <div className="col-xs-1">
-      <div className="row">
-      <div className="col-xs-2">
-      <input type="checkbox" />
-      </div>
-      <div className="col-xs-2">
-      <i className="star fa fa-star-o"></i>
-      </div>
-      </div>
-      </div>
-      <div className="col-xs-11">
-      <a href='#'>
-        {e.subject}
-      </a>
-      </div>
-      </div>
-    )}
-    </div>
-)}
+class MessageList extends React.Component {
+  constructor(props) {
+    super(props)
+  }
 
-export default MessageList;
+  render() {
+    return (
+      <div>
+        {this.props.messages.map((e, i) => {
+          return (
+            <Message key={i} message={e} selectMessage={this.props.selectMessage} />);
+          })
+        }
+      </div>
+    );
+  }
+
+}
+
+  export default MessageList;
