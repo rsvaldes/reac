@@ -21,7 +21,7 @@ const messages = [
     "subject": "connecting the system won't do anything, we need to input the mobile AI panel!",
     "read": false,
     "starred": false,
-    "selected": true,
+    "selected": false,
     "labels": []
   },
   {
@@ -29,7 +29,7 @@ const messages = [
     "subject": "Use the 1080p HTTP feed, then you can parse the cross-platform hard drive!",
     "read": false,
     "starred": false,
-    "selected": true,
+    "selected": false,
     "labels": ["dev"]
   },
   {

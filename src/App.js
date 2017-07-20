@@ -24,6 +24,17 @@ class App extends Component {
         });
         (starredMessage.starred === false) ? starredMessage.starred = true : starredMessage.starred = false;
         this.setState({messages:messagesArr});
+      },
+      selectAll: () => {
+        let messagesArr = this.props.messages;
+        let allSelect = messagesArr.every((message) => {
+          return message.selected;
+        });
+        console.log(allSelect);
+        messagesArr.map((message) => {
+          return message.selected = !allSelect
+        });
+        this.setState({messages:messagesArr});
       }
     };
   }
@@ -31,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Toolbar messages = {this.state.messages}/>
+      <Toolbar messages = {this.state.messages} selectAll = {this.state.selectAll} />
       <MessageList messages={this.state.messages} selectMessage={this.state.selectMessage} starMessage={this.state.starMessage} />
       </div>
     )}
