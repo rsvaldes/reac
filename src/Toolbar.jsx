@@ -2,19 +2,7 @@ import React from 'react';
 
 class Toolbar extends React.Component{
 
-  setClass = () => {
-    let boxClass = '';
-    if (this.props.messages.every((message) => message.selected)) {
-      boxClass = 'fa fa-check-square-o';
-    }
-    else if (this.props.messages.some((message) => message.selected)) {
-      boxClass = 'fa fa-minus-square-o';
-    }
-    else {
-      boxClass = 'fa fa-square-o';
-    }
-    return boxClass;
-  }
+  
 
   render() {
     return (
@@ -26,7 +14,7 @@ class Toolbar extends React.Component{
               unread messages
             </p>
             <button onClick = {this.props.selectAll} className="btn btn-default">
-              <i className={this.setClass()}></i>
+              <i className={(this.props.messages.every((message) => message.selected)) ? 'fa fa-check-square-o' : (this.props.messages.some((message) => message.selected)) ? 'fa fa-minus-square-o' : 'fa fa-square-o' }></i>
             </button>
             <button className="btn btn-default">
               Mark As Read
